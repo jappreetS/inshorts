@@ -6,12 +6,10 @@ import './Header.scss';
 class Header extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <div className="header">
-          <img alt="inshorts" src={inshortsIcon} />
-          inshorts
-        </div>
-      </React.Fragment>
+      <div className="header">
+        <img alt="inshorts" src={inshortsIcon} />
+        inshorts
+      </div>
     );
   }
 }
