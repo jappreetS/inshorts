@@ -1,11 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const NewsDetail = () => {
+import './NewsDetail.scss';
+
+const NewsDetail = ({ detail }) => {
   return (
-    <React.Fragment>
-      NewsDetail Element
-    </React.Fragment>
+    <div className="newsDetail">
+      {detail}
+    </div>
   );
 };
+
+NewsDetail.defaultProps = {
+  detail: 'News Detail',
+}
+
+NewsDetail.propTypes = {
+  detail: PropTypes.string,
+}
 
 export default NewsDetail;

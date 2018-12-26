@@ -1,0 +1,15 @@
+@import './../../global/styles/common.scss';
+
+.newsDetail {
+  text-align: center;
+  font-size: $font-size-18;
+  padding: $padding-15 $padding-0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .newsDetail {
+    font-size: $font-size-15;
+    padding: $padding-10 $padding-0;
+  }
+}
