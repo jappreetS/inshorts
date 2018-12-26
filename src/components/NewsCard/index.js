@@ -3,6 +3,7 @@ import NewsTitle from './../../elements/NewsTitle';
 import NewsDetail from './../../elements/NewsDetail';
 
 import './NewsCard.scss';
+import UserAction from '../UserAction';
 
 class NewsCard extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class NewsCard extends React.Component {
       <div className="newsCard">
         <NewsTitle title="Title" />
         <NewsDetail detail="News Short Detail" />
+        <UserAction />
       </div>
     );
   }
