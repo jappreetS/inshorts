@@ -1,0 +1,20 @@
+@import './../../global/styles/common.scss';
+
+.newsTitle {
+  text-align: center;
+  font-size: $font-size-20;
+  padding: $padding-15 $padding-0;
+}
+
+@media screen and (max-width: 768px) {
+  .newsTitle {
+    font-size: $font-size-16;
+    padding: $padding-10 $padding-0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .newsTitle {
+    font-size: $font-size-18;
+  }
+}

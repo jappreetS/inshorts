@@ -1,11 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const NewsTitle = () => {
+import './NewsTitle.scss';
+
+const NewsTitle = ({ title }) => {
   return (
-    <React.Fragment>
-      NewsTitle Element
-    </React.Fragment>
+    <div className="newsTitle">
+      {title}
+    </div>
   );
 };
+
+NewsTitle.defaultProps = {
+  title: 'News Title',
+}
+
+NewsTitle.propTypes = {
+  title: PropTypes.string,
+}
 
 export default NewsTitle;
