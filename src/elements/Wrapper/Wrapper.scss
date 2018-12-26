@@ -1,0 +1,23 @@
+@import './../../global/styles/common.scss';
+
+.wrapper {
+  width: 70%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .wrapper {
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    width: 95%;
+    margin: auto;
+    padding: 20px 0;
+  }
+}
