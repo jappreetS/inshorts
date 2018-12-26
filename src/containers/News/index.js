@@ -1,11 +1,16 @@
 import React from 'react';
+import Wrapper from './../../elements/Wrapper'
+import NewsCard from '../../components/NewsCard';
+
+import './News.scss';
 
 class News extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        News
-      </React.Fragment>
+      <Wrapper>
+        <NewsCard />
+        <NewsCard />
+      </Wrapper >
     );
   }
 }

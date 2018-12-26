@@ -1,0 +1,22 @@
+@import './../../global/styles/common.scss';
+
+.newsCard {
+  display: inline-block;
+  width: 45%;
+  color: #fff;
+  background-color: #f00;
+  margin: 2.5%;
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .newsCard {
+    width: 90%;
+    margin: 5%;
+  }
+}
