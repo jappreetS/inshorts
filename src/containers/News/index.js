@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { get } from 'lodash';
+import { get, map } from 'lodash';
 import Wrapper from './../../elements/Wrapper'
 import NewsCard from '../../components/NewsCard';
 import { fetchNewsListDataAction } from '../../actions';
@@ -14,10 +14,16 @@ class News extends React.Component {
   }
 
   render() {
+    const { newsList } = this.props;
     return (
       <Wrapper>
-        <NewsCard />
-        <NewsCard />
+        {
+          newsList.map(newsItem => (
+            <React.Fragment key={newsItem.id}>
+              <NewsCard newsData={newsItem} />
+            </React.Fragment>
+          ))
+        }
       </Wrapper >
     );
   }

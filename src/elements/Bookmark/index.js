@@ -14,7 +14,7 @@ const Bookmark = ({ bookmarked }) => {
 };
 
 Bookmark.defaultProps = {
-  bookmarked: true,
+  bookmarked: false,
 }
 
 Bookmark.propTypes = {
