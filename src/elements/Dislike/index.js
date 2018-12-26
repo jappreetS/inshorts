@@ -1,11 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Dislike = () => {
+import './Dislike.scss';
+
+const Dislike = ({ disliked }) => {
   return (
-    <React.Fragment>
-      Dislike Element
-    </React.Fragment>
+    <span className={disliked ? 'disliked' : 'dislike'}>
+      {
+        disliked ? 'Disliked' : 'Dislike'
+      }
+    </span>
   );
 };
+
+Dislike.defaultProps = {
+  disliked: false,
+}
+
+Dislike.propTypes = {
+  disliked: PropTypes.bool,
+}
 
 export default Dislike;

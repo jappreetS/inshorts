@@ -1,0 +1,18 @@
+@import './../../global/styles/common.scss';
+
+.dislike, .disliked {
+  cursor: pointer;
+  margin: $margin-0 $margin-10;
+  border-bottom: 1px solid $yellow;
+}
+
+.disliked {
+  color: $yellow;
+  border-bottom: 1px solid $white;
+}
+
+@media screen and (max-width: 768px) {
+  .dislike, .disliked {
+    margin: $margin-0 $margin-5;
+  }
+}
