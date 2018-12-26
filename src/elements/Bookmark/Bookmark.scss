@@ -1,0 +1,19 @@
+@import './../../global/styles/common.scss';
+
+.bookmark, .bookmarked {
+  cursor: pointer;
+  margin: $margin-0 $margin-10;
+  float: right;
+  border-bottom: 1px solid $yellow;
+}
+
+.bookmarked {
+  color: $yellow;
+  border-bottom: 1px solid $white;
+}
+
+@media screen and (max-width: 768px) {
+  .bookmark, .bookmarked {
+    margin: $margin-0 $margin-5;
+  }
+}

@@ -1,11 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Bookmark = () => {
+import './Bookmark.scss';
+
+const Bookmark = ({ bookmarked }) => {
   return (
-    <React.Fragment>
-      Bookmark Element
-    </React.Fragment>
+    <span className={bookmarked ? 'bookmarked' : 'bookmark'}>
+      {
+        bookmarked ? 'Bookmarked' : 'Bookmark'
+      }
+    </span>
   );
 };
+
+Bookmark.defaultProps = {
+  bookmarked: true,
+}
+
+Bookmark.propTypes = {
+  bookmarked: PropTypes.bool,
+}
 
 export default Bookmark;
