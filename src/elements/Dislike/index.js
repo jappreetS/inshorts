@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 import './Dislike.scss';
 
-const Dislike = ({ disliked }) => {
+const Dislike = ({ dislikes }) => {
   return (
-    <span className={disliked ? 'disliked' : 'dislike'}>
+    <span className={dislikes > 0 ? 'dislikes' : 'dislike'}>
       {
-        disliked ? 'Disliked' : 'Dislike'
+        dislikes > 0 ? `Dislikes [${dislikes}]` : 'Dislike'
       }
     </span>
   );
 };
 
 Dislike.defaultProps = {
-  disliked: false,
+  dislikes: 0,
 }
 
 Dislike.propTypes = {
-  disliked: PropTypes.bool,
+  dislikes: PropTypes.number,
 }
 
 export default Dislike;

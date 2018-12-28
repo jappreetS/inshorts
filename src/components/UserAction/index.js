@@ -10,23 +10,23 @@ class UserAction extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      liked: props.liked,
-      disliked: props.disliked,
+      likes: props.likes,
+      dislikes: props.dislikes,
       bookmarked: props.bookmarked,
     }
   }
 
   render() {
     const {
-      liked,
-      disliked,
+      likes,
+      dislikes,
       bookmarked,
     } = this.state;
     return (
       <div className="userAction">
         <div className="userAction-container">
-          <Like liked={liked} />
-          <Dislike disliked={disliked} />
+          <Like likes={likes} />
+          <Dislike dislikes={dislikes} />
           <Bookmark bookmarked={bookmarked} />
         </div>
       </div>
@@ -35,14 +35,14 @@ class UserAction extends React.Component {
 }
 
 UserAction.defaultProps = {
-  liked: false,
-  disliked: false,
+  likes: 0,
+  dislikes: 0,
   bookmarked: false,
 }
 
 UserAction.defaultProps = {
-  liked: PropTypes.bool,
-  disliked: PropTypes.bool,
+  likes: PropTypes.number,
+  dislikes: PropTypes.number,
   bookmarked: PropTypes.bool,
 }
 

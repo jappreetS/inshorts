@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 
 import './Like.scss';
 
-const Like = ({ liked }) => {
+const Like = ({ likes }) => {
   return (
-    <span className={liked ? 'liked' : 'like'}>
+    <span className={likes > 0 ? 'likes' : 'like'}>
       {
-        liked ? 'Liked' : 'Like'
+        likes > 0 ? `Likes [${likes}]` : 'Like'
       }
     </span>
   );
 };
 
 Like.defaultProps = {
-  liked: false,
+  likes: 0,
 }
 
 Like.propTypes = {
-  liked: PropTypes.bool,
+  likes: PropTypes.number,
 }
 
 export default Like;

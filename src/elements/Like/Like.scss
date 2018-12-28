@@ -1,19 +1,19 @@
 @import './../../global/styles/common.scss';
 
-.like, .liked {
+.like, .likes {
   cursor: pointer;
   margin: $margin-0 $margin-10;
   border-bottom: 1px solid $yellow;
 }
 
-.liked {
+.likes {
   color: $yellow;
   border-bottom: 1px solid $white;
 }
 
 
 @media screen and (max-width: 768px) {
-  .like, .liked {
+  .like, .likes {
     margin: $margin-0 $margin-5;
   }
 }

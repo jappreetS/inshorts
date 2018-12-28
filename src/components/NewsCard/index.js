@@ -11,18 +11,18 @@ class NewsCard extends React.Component {
     const {
       id,
       title,
-      shortDescription,
-      liked,
-      disliked,
+      newsDescription,
+      likes,
+      dislikes,
       bookmarked,
     } = this.props.newsData;
     return (
       <div id={id} className="newsCard">
         <NewsTitle title={title} />
-        <NewsDetail detail={shortDescription} />
+        <NewsDetail detail={newsDescription} />
         <UserAction
-          liked={liked}
-          disliked={disliked}
+          likes={likes}
+          dislikes={dislikes}
           bookmarked={bookmarked}
         />
       </div>
@@ -31,16 +31,23 @@ class NewsCard extends React.Component {
 }
 
 NewsCard.defaultProps = {
-  newsData: {},
+  newsData: {
+    id: 1,
+    title: 'News Title',
+    title: 'News Description',
+    likes: 0,
+    dislikes: 0,
+    bookmarked: false,
+  },
 }
 
 NewsCard.defaultProps = {
   newsData: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
-    shortDescription: PropTypes.string,
-    liked: PropTypes.bool,
-    disliked: PropTypes.bool,
+    newsDescription: PropTypes.string,
+    likes: PropTypes.number,
+    dislikes: PropTypes.number,
     bookmarked: PropTypes.bool,
   }),
 }
