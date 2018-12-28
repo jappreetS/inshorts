@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NewsTitle from './../../elements/NewsTitle';
 import NewsDetail from './../../elements/NewsDetail';
-import UserAction from '../UserAction';
+import UserAction from './../../elements/UserAction';
 
 import inshortsIcon from './../../global/assets/inshorts.png';
 import './NewsCard.scss';
