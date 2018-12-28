@@ -21,7 +21,7 @@ class NewsCard extends React.Component {
     return (
       <div id={id} className="newsCard" style={{ backgroundImage: `url(${image})` }}>
         <NewsTitle title={title} />
-        <NewsDetail detail={newsDescription} />
+        <NewsDetail detail={newsDescription} truncate truncateLength={248} />
         <UserAction
           likes={likes}
           dislikes={dislikes}

@@ -4,13 +4,13 @@
   position: relative;
   text-align: center;
   font-size: $font-size-24;
-  padding: $padding-15 $padding-0;
+  padding: $padding-15 $padding-15;
 }
 
 @media screen and (max-width: 768px) {
   .newsTitle {
     font-size: $font-size-22;
-    padding: $padding-10 $padding-0;
+    padding: $padding-10 $padding-10;
   }
 }
 

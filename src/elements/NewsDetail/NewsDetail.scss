@@ -2,17 +2,16 @@
 
 .newsDetail {
   position: relative;
-  text-align: center;
+  text-align: justify;
   font-size: $font-size-18;
-  padding: $padding-15 $padding-0;
+  padding: $padding-20 $padding-15 $padding-0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin-bottom: $margin-20;
   cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
   .newsDetail {
     font-size: $font-size-15;
-    padding: $padding-10 $padding-0;
+    padding: $padding-0 $padding-10;
   }
 }
