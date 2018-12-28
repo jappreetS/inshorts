@@ -18,12 +18,12 @@ class News extends React.Component {
     return (
       <Wrapper>
         {isEmpty(newsList) &&
-          <div style={{ textAlign: 'center' }}>
+          <div className="text-center">
             Loading...
           </div>
         }
         {
-          !isEmpty(newsList) && newsList.map(newsItem => (
+          !isEmpty(newsList) && map(newsList, newsItem => (
             <React.Fragment key={newsItem.id}>
               <NewsCard newsData={newsItem} />
             </React.Fragment>
