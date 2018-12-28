@@ -34,7 +34,7 @@ NewsCard.defaultProps = {
   newsData: {
     id: 1,
     title: 'News Title',
-    title: 'News Description',
+    newsDescription: 'News Description',
     likes: 0,
     dislikes: 0,
     bookmarked: false,
