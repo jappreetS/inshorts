@@ -7,12 +7,12 @@ import {
 import News from './../News';
 import DetailedNews from './../DetailedNews';
 
-const Main = ({ id }) => (
+const Main = () => (
   <React.Fragment>
     <Switch>
       <Redirect exact from='/' to='/news' component={News} />
-      <Route path='/news' component={News} />
-      <Route path={`/${id}`} component={DetailedNews} />
+      <Route exact path='/news' component={News} />
+      <Route path='/news/:id' component={DetailedNews} />
     </Switch>
   </React.Fragment>
 );

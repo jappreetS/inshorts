@@ -6,7 +6,7 @@ import Footer from './../components/Footer';
 const App = () => (
   <React.Fragment>
     <Header />
-    <Main id={1} />
+    <Main />
     <Footer />
   </React.Fragment>
 );
