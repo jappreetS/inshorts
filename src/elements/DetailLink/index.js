@@ -5,20 +5,20 @@ import routes from '../../routes';
 
 import './DetailLink.scss';
 
-const DetailLink = ({ id }) => {
+const DetailLink = ({ newsId }) => {
   return (
-    <Link className="detailLink" to={`/${routes.news}/${id}`}>
+    <Link className="detailLink" to={`/${routes.news}/${newsId}`}>
       Click for detailed news
     </Link>
   );
 };
 
 DetailLink.defaultProps = {
-  id: 1,
+  newsId: 1,
 }
 
 DetailLink.propTypes = {
-  id: PropTypes.number,
+  newsId: PropTypes.number,
 }
 
 export default DetailLink;

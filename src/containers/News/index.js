@@ -15,8 +15,11 @@ class News extends React.Component {
       newsList: props.newsList,
     };
   }
+
   componentWillMount() {
-    this.props.actions.fetchNewsListAction();
+    if (isEmpty(this.props.newsList)) {
+      this.props.actions.fetchNewsListAction();
+    }
   }
 
   componentWillReceiveProps(nextProps) {

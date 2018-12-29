@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+
 import NewsTitle from './../../elements/NewsTitle';
 import NewsDetail from './../../elements/NewsDetail';
 import UserAction from './../../elements/UserAction';
+import DetailLink from '../../elements/DetailLink';
 import {
   incrementLikeDataAction,
   incrementDislikeDataAction,
@@ -13,7 +15,6 @@ import {
 
 import inshortsIcon from './../../global/assets/inshorts.png';
 import './NewsCard.scss';
-import DetailLink from '../../elements/DetailLink';
 
 class NewsCard extends React.Component {
   constructor(props) {
@@ -71,7 +72,7 @@ class NewsCard extends React.Component {
       <div id={id} className="newsCard" style={{ backgroundImage: `url(${image})` }}>
         <NewsTitle title={title} />
         <NewsDetail detail={newsDescription} truncate truncateLength={248} />
-        <DetailLink />
+        <DetailLink newsId={id} />
         <UserAction
           likes={likes}
           dislikes={dislikes}
