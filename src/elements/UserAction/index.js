@@ -6,10 +6,10 @@ import Bookmark from './../Bookmark';
 
 import './UserAction.scss';
 
-const UserAction = ({ likes, dislikes, bookmarked }) => (
+const UserAction = ({ likes, dislikes, bookmarked, onLikeClick }) => (
   <div className="userAction">
     <div className="userAction-container">
-      <Like likes={likes} />
+      <Like likes={likes} onLikeClick={onLikeClick} />
       <Dislike dislikes={dislikes} />
       <Bookmark bookmarked={bookmarked} />
     </div>

@@ -1,1 +1,2 @@
 export const NEWS_LIST_DATA = 'NEWS_LIST_DATA';
+export const INCREMENT_LIKE = 'INCREMENT_LIKE';
