@@ -13,12 +13,13 @@ const UserAction = (
     bookmarked,
     onLikeClick,
     onDislikeClick,
+    onBookmarkClick,
   }) => (
     <div className="userAction">
       <div className="userAction-container">
         <Like likes={likes} onLikeClick={onLikeClick} />
         <Dislike dislikes={dislikes} onDislikeClick={onDislikeClick} />
-        <Bookmark bookmarked={bookmarked} />
+        <Bookmark bookmarked={bookmarked} onBookmarkClick={onBookmarkClick} />
       </div>
     </div>
   );
@@ -29,6 +30,7 @@ UserAction.defaultProps = {
   bookmarked: false,
   onLikeClick: () => { },
   onDislikeClick: () => { },
+  onBookmarkClick: () => { },
 }
 
 UserAction.propTypes = {
@@ -37,6 +39,7 @@ UserAction.propTypes = {
   bookmarked: PropTypes.bool,
   onLikeClick: PropTypes.func,
   onDislikeClick: PropTypes.func,
+  onBookmarkClick: PropTypes.func,
 }
 
 export default UserAction;

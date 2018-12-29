@@ -8,6 +8,7 @@ import UserAction from './../../elements/UserAction';
 import {
   incrementLikeDataAction,
   incrementDislikeDataAction,
+  toggleBookmarkDataAction,
 } from '../../actions';
 
 import inshortsIcon from './../../global/assets/inshorts.png';
@@ -31,6 +32,11 @@ class NewsCard extends React.Component {
   handleDislikeClick = () => {
     const { id } = this.props.newsData;
     this.props.actions.incrementDislikeAction(id);
+  }
+
+  handleBookmarkClick = () => {
+    const { id } = this.props.newsData;
+    this.props.actions.toggleBookmarkAction(id);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -70,6 +76,7 @@ class NewsCard extends React.Component {
           bookmarked={bookmarked}
           onLikeClick={this.handleLikeClick}
           onDislikeClick={this.handleDislikeClick}
+          onBookmarkClick={this.handleBookmarkClick}
         />
       </div>
     );
@@ -89,6 +96,7 @@ NewsCard.defaultProps = {
   actions: {
     incrementLikeAction: () => { },
     incrementDislikeAction: () => { },
+    toggleBookmarkAction: () => { },
   },
 }
 
@@ -105,6 +113,7 @@ NewsCard.propTypes = {
   actions: PropTypes.shape({
     incrementLikeAction: PropTypes.func,
     incrementDislikeAction: PropTypes.func,
+    toggleBookmarkAction: PropTypes.func,
   }),
 };
 
@@ -112,6 +121,7 @@ const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators({
     incrementLikeAction: incrementLikeDataAction,
     incrementDislikeAction: incrementDislikeDataAction,
+    toggleBookmarkAction: toggleBookmarkDataAction,
   }, dispatch),
 });
 

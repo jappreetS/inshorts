@@ -2,6 +2,7 @@ import {
   NEWS_LIST_DATA,
   INCREMENT_LIKE,
   INCREMENT_DISLIKE,
+  TOGGLE_BOOKMARK,
 } from "../../constants/actionTypes";
 
 const newsListReducer = (state = {}, action) => {
@@ -30,6 +31,17 @@ const newsListReducer = (state = {}, action) => {
         return currentNews;
       })
       return updatedDisikedNewsItems;
+    case TOGGLE_BOOKMARK:
+      const updatedBookmarkedNewsItems = state.map(currentNews => {
+        if (currentNews.id === action.payload) {
+          return {
+            ...currentNews,
+            bookmarked: !currentNews.bookmarked,
+          }
+        }
+        return currentNews;
+      })
+      return updatedBookmarkedNewsItems;
     default:
       return state;
   }
