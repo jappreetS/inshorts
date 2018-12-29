@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './NewsTitle.scss';
-
-const NewsTitle = ({ title }) => {
+const NewsTitle = (
+  {
+    title,
+    newsTitleClassNames,
+  }) => {
   return (
-    <div className="newsTitle">
+    <div className={newsTitleClassNames}>
       {title}
     </div>
   );
 };
 
 NewsTitle.defaultProps = {
+  newsTitleClassNames: "",
   title: 'News Title',
 }
 
 NewsTitle.propTypes = {
+  newsTitleClassNames: PropTypes.string,
   title: PropTypes.string,
 }
 

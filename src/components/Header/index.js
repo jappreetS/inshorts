@@ -1,6 +1,6 @@
 import React from 'react';
 
-import inshortsIcon from './../../global/assets/inshorts.png';
+import inshortsIcon from './../../global/assets/images/inshorts.png';
 import './Header.scss';
 
 class Header extends React.Component {

@@ -3,21 +3,25 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import routes from '../../routes';
 
-import './DetailLink.scss';
-
-const DetailLink = ({ newsId }) => {
+const DetailLink = (
+  {
+    newsId,
+    detailLinkClassNames
+  }) => {
   return (
-    <Link className="detailLink" to={`/${routes.news}/${newsId}`}>
-      Click for detailed news
+    <Link className={detailLinkClassNames} to={`/${routes.news}/${newsId}`}>
+      Click here to see full news
     </Link>
   );
 };
 
 DetailLink.defaultProps = {
+  detailLinkClassNames: "",
   newsId: 1,
 }
 
 DetailLink.propTypes = {
+  detailLinkClassNames: PropTypes.string,
   newsId: PropTypes.number,
 }
 

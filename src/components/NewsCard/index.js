@@ -13,7 +13,7 @@ import {
   toggleBookmarkDataAction,
 } from '../../actions';
 
-import inshortsIcon from './../../global/assets/inshorts.png';
+import inshortsIcon from './../../global/assets/images/inshorts.png';
 import './NewsCard.scss';
 
 class NewsCard extends React.Component {
@@ -70,9 +70,14 @@ class NewsCard extends React.Component {
     } = this.state;
     return (
       <div id={id} className="newsCard" style={{ backgroundImage: `url(${image})` }}>
-        <NewsTitle title={title} />
-        <NewsDetail detail={newsDescription} truncate truncateLength={248} />
-        <DetailLink newsId={id} />
+        <NewsTitle title={title} newsTitleClassNames="newsTitle" />
+        <NewsDetail
+          detail={newsDescription}
+          truncate
+          truncateLength={248}
+          newsDetailClassNames="newsDetail"
+        />
+        <DetailLink newsId={id} detailLinkClassNames="detailLink" />
         <UserAction
           likes={likes}
           dislikes={dislikes}
@@ -80,6 +85,8 @@ class NewsCard extends React.Component {
           onLikeClick={this.handleLikeClick}
           onDislikeClick={this.handleDislikeClick}
           onBookmarkClick={this.handleBookmarkClick}
+          userActionClassNames="userAction"
+          userActionContainerClassNames="userAction-container"
         />
       </div>
     );

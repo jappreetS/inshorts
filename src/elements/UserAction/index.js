@@ -4,8 +4,6 @@ import Like from './../Like';
 import Dislike from './../Dislike';
 import Bookmark from './../Bookmark';
 
-import './UserAction.scss';
-
 const UserAction = (
   {
     likes,
@@ -14,9 +12,11 @@ const UserAction = (
     onLikeClick,
     onDislikeClick,
     onBookmarkClick,
+    userActionClassNames,
+    userActionContainerClassNames,
   }) => (
-    <div className="userAction">
-      <div className="userAction-container">
+    <div className={userActionClassNames}>
+      <div className={userActionContainerClassNames}>
         <Like likes={likes} onLikeClick={onLikeClick} />
         <Dislike dislikes={dislikes} onDislikeClick={onDislikeClick} />
         <Bookmark bookmarked={bookmarked} onBookmarkClick={onBookmarkClick} />
@@ -31,6 +31,8 @@ UserAction.defaultProps = {
   onLikeClick: () => { },
   onDislikeClick: () => { },
   onBookmarkClick: () => { },
+  userActionClassNames: "",
+  userActionContainerClassNames: "",
 }
 
 UserAction.propTypes = {
@@ -40,6 +42,8 @@ UserAction.propTypes = {
   onLikeClick: PropTypes.func,
   onDislikeClick: PropTypes.func,
   onBookmarkClick: PropTypes.func,
+  userActionClassNames: PropTypes.string,
+  userActionContainerClassNames: PropTypes.string,
 }
 
 export default UserAction;
