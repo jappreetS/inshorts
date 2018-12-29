@@ -5,7 +5,10 @@ import { connect } from 'react-redux';
 import NewsTitle from './../../elements/NewsTitle';
 import NewsDetail from './../../elements/NewsDetail';
 import UserAction from './../../elements/UserAction';
-import { incrementLikeDataAction } from '../../actions';
+import {
+  incrementLikeDataAction,
+  incrementDislikeDataAction,
+} from '../../actions';
 
 import inshortsIcon from './../../global/assets/inshorts.png';
 import './NewsCard.scss';
@@ -23,6 +26,11 @@ class NewsCard extends React.Component {
   handleLikeClick = () => {
     const { id } = this.props.newsData;
     this.props.actions.incrementLikeAction(id);
+  }
+
+  handleDislikeClick = () => {
+    const { id } = this.props.newsData;
+    this.props.actions.incrementDislikeAction(id);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -61,6 +69,7 @@ class NewsCard extends React.Component {
           dislikes={dislikes}
           bookmarked={bookmarked}
           onLikeClick={this.handleLikeClick}
+          onDislikeClick={this.handleDislikeClick}
         />
       </div>
     );
@@ -77,9 +86,13 @@ NewsCard.defaultProps = {
     dislikes: 0,
     bookmarked: false,
   },
+  actions: {
+    incrementLikeAction: () => { },
+    incrementDislikeAction: () => { },
+  },
 }
 
-NewsCard.defaultProps = {
+NewsCard.propTypes = {
   newsData: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,
@@ -89,11 +102,16 @@ NewsCard.defaultProps = {
     dislikes: PropTypes.number,
     bookmarked: PropTypes.bool,
   }),
-}
+  actions: PropTypes.shape({
+    incrementLikeAction: PropTypes.func,
+    incrementDislikeAction: PropTypes.func,
+  }),
+};
 
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators({
     incrementLikeAction: incrementLikeDataAction,
+    incrementDislikeAction: incrementDislikeDataAction,
   }, dispatch),
 });
 
