@@ -1,0 +1,26 @@
+@import './../../global/styles/common.scss';
+
+.detailLink {
+  padding: $padding-15;
+  position: absolute;
+  width: 93%;
+  bottom: $bottom-40;
+  font-size: $font-size-16;
+  color: $white;
+  text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .detailLink {
+    padding: $padding-10;
+    bottom: $bottom-35;
+    font-size: $font-size-13;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detailLink {
+    padding: $padding-10;
+    font-size: $font-size-12;
+  }
+}

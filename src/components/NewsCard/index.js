@@ -13,6 +13,7 @@ import {
 
 import inshortsIcon from './../../global/assets/inshorts.png';
 import './NewsCard.scss';
+import DetailLink from '../../elements/DetailLink';
 
 class NewsCard extends React.Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class NewsCard extends React.Component {
       <div id={id} className="newsCard" style={{ backgroundImage: `url(${image})` }}>
         <NewsTitle title={title} />
         <NewsDetail detail={newsDescription} truncate truncateLength={248} />
+        <DetailLink />
         <UserAction
           likes={likes}
           dislikes={dislikes}
