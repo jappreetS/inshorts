@@ -16,25 +16,44 @@ $red: #ff0000;
 $yellow: #ffff00;
 $waterloo: #808290;
 $mine-shaft: #323232;
+$mako: #44444d;
 
 // widths
+$width-500: 500px;
+$width-480: 480px;
+$width-30: 30px;
 $width-30: 30px;
 $width-24: 24px;
 $width-20: 20px;
 
 // widths in percent
 $width-percent-100: 100%;
+$width-percent-96: 96%;
+$width-percent-93: 93%;
+$width-percent-92: 92%;
 $width-percent-70: 70%;
 $width-percent-50: 50%;
+$width-percent-49: 49%;
+$width-percent-47: 47%;
+$width-percent-44: 44%;
 
 // heights
+$height-700: 700px;
+$height-650: 650px;
 $height-400: 400px;
+$height-375: 375px;
 $height-350: 350px;
+$height-325: 325px;
 $height-300: 300px;
 $height-100: 100px;
 $height-30: 30px;
 $height-24: 24px;
 $height-20: 20px;
+
+// heights in percent
+$height-percent-94: 94%;
+$height-percent-70: 70%;
+$height-percent-50: 50%;
 
 // paddings
 $padding-50: 50px;
@@ -43,11 +62,15 @@ $padding-20: 20px;
 $padding-15: 15px;
 $padding-12: 12px;
 $padding-10: 10px;
+$padding-8: 8px;
 $padding-5: 5px;
 $padding-0: 0;
 
 // margins
+$margin-385: 385px;
+$margin-330: 330px;
 $margin-50: 50px;
+$margin-40: 40px;
 $margin-25: 25px;
 $margin-20: 20px;
 $margin-15: 15px;
@@ -55,7 +78,33 @@ $margin-10: 10px;
 $margin-5: 5px;
 $margin-0: 0;
 
+// right spaces
+$right-30: 30px;
+$right-20: 20px;
+$right-10: 10px;
+$right-0: 0;
+
+// top spaces
+$top-95: 95px;
+$top-80: 80px;
+$top-60: 60px;
+
 // bottom spaces
 $bottom-40: 40px;
 $bottom-35: 35px;
+$bottom-12: 12px;
 $bottom-0: 0;
+
+// left spaces
+$left-10: 10px;
+
+// line heights
+$line-height-27: 27px;
+$line-height-25: 25px;
+$line-height-22: 22px;
+$line-height-20: 20px;
+$line-height-18: 18px;
+
+// border radius
+$border-radius-5: 5px;
+$border-radius-4: 4px;

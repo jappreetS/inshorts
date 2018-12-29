@@ -11,8 +11,9 @@ import {
   fetchNewsListDataAction,
 } from '../../actions';
 
-import inshortsIcon from './../../global/assets/inshorts.png';
+import inshortsIcon from './../../global/assets/images/inshorts.png';
 import Wrapper from '../../elements/Wrapper';
+import DetailedCard from '../../components/DetailedCard';
 
 class DetailedNews extends React.Component {
   constructor(props) {
@@ -57,9 +58,7 @@ class DetailedNews extends React.Component {
           }
           {
             !isEmpty(filteredNews) &&
-            <div>
-              {detailedNews.title}
-            </div>
+            <DetailedCard detailedNewsData={detailedNews} />
           }
         </Wrapper>
       </React.Fragment>
