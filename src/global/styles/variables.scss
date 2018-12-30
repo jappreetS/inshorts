@@ -1,3 +1,19 @@
+// colors
+$mako: #44444d;
+$mine-shaft: #323232;
+$red: #ff0000;
+$waterloo: #808290;
+$white: #ffffff;
+$yellow: #ffff00;
+
+// border
+$border-1: 1px;
+$border-2: 2px;
+
+// border radius
+$border-radius-5: 5px;
+$border-radius-4: 4px;
+
 // font-sizes
 $font-size-30: 30px;
 $font-size-24: 24px;
@@ -10,15 +26,7 @@ $font-size-14: 14px;
 $font-size-13: 13px;
 $font-size-12: 12px;
 
-// colors
-$white: #ffffff;
-$red: #ff0000;
-$yellow: #ffff00;
-$waterloo: #808290;
-$mine-shaft: #323232;
-$mako: #44444d;
-
-// widths
+// width - in pixels
 $width-500: 500px;
 $width-480: 480px;
 $width-30: 30px;
@@ -26,18 +34,22 @@ $width-30: 30px;
 $width-24: 24px;
 $width-20: 20px;
 
-// widths in percent
+// width - in percent
 $width-percent-100: 100%;
 $width-percent-96: 96%;
+$width-percent-95: 95%;
 $width-percent-93: 93%;
 $width-percent-92: 92%;
+$width-percent-90: 90%;
+$width-percent-80: 80%;
 $width-percent-70: 70%;
 $width-percent-50: 50%;
 $width-percent-49: 49%;
 $width-percent-47: 47%;
+$width-percent-45: 45%;
 $width-percent-44: 44%;
 
-// heights
+// height - in pixels
 $height-700: 700px;
 $height-650: 650px;
 $height-400: 400px;
@@ -50,13 +62,16 @@ $height-30: 30px;
 $height-24: 24px;
 $height-20: 20px;
 
-// heights in percent
+// height - in percent
+$height-percent-100: 100%;
 $height-percent-94: 94%;
 $height-percent-70: 70%;
 $height-percent-50: 50%;
 
-// paddings
+// padding - in pixels
 $padding-50: 50px;
+$padding-40: 40px;
+$padding-30: 30px;
 $padding-25: 25px;
 $padding-20: 20px;
 $padding-15: 15px;
@@ -66,7 +81,7 @@ $padding-8: 8px;
 $padding-5: 5px;
 $padding-0: 0;
 
-// margins
+// margin - in pixels
 $margin-385: 385px;
 $margin-330: 330px;
 $margin-50: 50px;
@@ -78,24 +93,28 @@ $margin-10: 10px;
 $margin-5: 5px;
 $margin-0: 0;
 
-// right spaces
+// margin - in percent
+$margin-percent-2p5: 2.5%;
+$margin-percent-5: 5%;
+
+// spaces - top
+$top-95: 95px;
+$top-80: 80px;
+$top-60: 60px;
+
+// spaces - right
 $right-30: 30px;
 $right-20: 20px;
 $right-10: 10px;
 $right-0: 0;
 
-// top spaces
-$top-95: 95px;
-$top-80: 80px;
-$top-60: 60px;
-
-// bottom spaces
+// spaces - bottom
 $bottom-40: 40px;
 $bottom-35: 35px;
 $bottom-12: 12px;
 $bottom-0: 0;
 
-// left spaces
+// spaces - left
 $left-10: 10px;
 
 // line heights
@@ -104,7 +123,3 @@ $line-height-25: 25px;
 $line-height-22: 22px;
 $line-height-20: 20px;
 $line-height-18: 18px;
-
-// border radius
-$border-radius-5: 5px;
-$border-radius-4: 4px;

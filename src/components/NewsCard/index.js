@@ -93,23 +93,6 @@ class NewsCard extends React.Component {
   }
 }
 
-NewsCard.defaultProps = {
-  newsData: {
-    id: 1,
-    title: 'News Title',
-    newsDescription: 'News Description',
-    image: inshortsIcon,
-    likes: 0,
-    dislikes: 0,
-    bookmarked: false,
-  },
-  actions: {
-    incrementLikeAction: () => { },
-    incrementDislikeAction: () => { },
-    toggleBookmarkAction: () => { },
-  },
-}
-
 NewsCard.propTypes = {
   newsData: PropTypes.shape({
     id: PropTypes.number,
@@ -125,6 +108,23 @@ NewsCard.propTypes = {
     incrementDislikeAction: PropTypes.func,
     toggleBookmarkAction: PropTypes.func,
   }),
+};
+
+NewsCard.defaultProps = {
+  newsData: {
+    id: 1,
+    title: 'News Title',
+    newsDescription: 'News Description',
+    image: inshortsIcon,
+    likes: 0,
+    dislikes: 0,
+    bookmarked: false,
+  },
+  actions: {
+    incrementLikeAction: () => { },
+    incrementDislikeAction: () => { },
+    toggleBookmarkAction: () => { },
+  },
 };
 
 const mapDispatchToProps = dispatch => ({

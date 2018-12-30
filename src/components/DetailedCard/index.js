@@ -90,23 +90,6 @@ class DetailedCard extends React.Component {
   }
 }
 
-DetailedCard.defaultProps = {
-  detailedNewsData: {
-    id: 1,
-    title: 'News Title',
-    newsDescription: 'News Description',
-    image: inshortsIcon,
-    likes: 0,
-    dislikes: 0,
-    bookmarked: false,
-  },
-  actions: {
-    incrementLikeAction: () => { },
-    incrementDislikeAction: () => { },
-    toggleBookmarkAction: () => { },
-  },
-}
-
 DetailedCard.propTypes = {
   detailedNewsData: PropTypes.shape({
     id: PropTypes.number,
@@ -122,6 +105,23 @@ DetailedCard.propTypes = {
     incrementDislikeAction: PropTypes.func,
     toggleBookmarkAction: PropTypes.func,
   }),
+};
+
+DetailedCard.defaultProps = {
+  detailedNewsData: {
+    id: 1,
+    title: 'News Title',
+    newsDescription: 'News Description',
+    image: inshortsIcon,
+    likes: 0,
+    dislikes: 0,
+    bookmarked: false,
+  },
+  actions: {
+    incrementLikeAction: () => { },
+    incrementDislikeAction: () => { },
+    toggleBookmarkAction: () => { },
+  },
 };
 
 const mapDispatchToProps = dispatch => ({

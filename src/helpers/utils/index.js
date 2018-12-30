@@ -1,4 +1,2 @@
 // Truncate string
-export const truncateString = (str, strLength) => {
-  return str.substr(0, strLength) + ' ...';
-}
+export const truncateString = (str, strLength) => str.substr(0, strLength) + ' ...';

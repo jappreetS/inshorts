@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { get, isEmpty, map } from 'lodash';
+
 import Wrapper from './../../elements/Wrapper'
 import NewsCard from '../../components/NewsCard';
 import { fetchNewsListDataAction } from './../../actions';
-
-import './News.scss';
 
 class News extends React.Component {
   constructor(props) {

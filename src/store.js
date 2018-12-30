@@ -4,7 +4,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import rootReducer from './reducers/rootReducer';
 
-const configureStore = (initialState = {}) => {
+const configureStore = () => {
   const store = createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(thunk)),

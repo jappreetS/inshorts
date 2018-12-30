@@ -9,12 +9,17 @@ const NewsDetail = (
     truncate,
     truncateLength,
     newsDetailClassNames
-  }) => {
-  return (
+  }) => (
     <div className={newsDetailClassNames}>
       {truncate ? truncateString(detail, truncateLength) : detail}
     </div>
   );
+
+NewsDetail.propTypes = {
+  newsDetailClassNames: PropTypes.string,
+  detail: PropTypes.string,
+  truncate: PropTypes.bool,
+  truncateLength: PropTypes.number,
 };
 
 NewsDetail.defaultProps = {
@@ -22,13 +27,6 @@ NewsDetail.defaultProps = {
   detail: 'News Detail',
   truncate: false,
   truncateLength: 248,
-}
-
-NewsDetail.propTypes = {
-  newsDetailClassNames: PropTypes.string,
-  detail: PropTypes.string,
-  truncate: PropTypes.bool,
-  truncateLength: PropTypes.number,
-}
+};
 
 export default NewsDetail;

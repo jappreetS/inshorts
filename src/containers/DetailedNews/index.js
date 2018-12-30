@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { get, isEmpty } from 'lodash';
 
+import DetailedCard from '../../components/DetailedCard';
+import Wrapper from '../../elements/Wrapper';
 import {
   incrementLikeDataAction,
   incrementDislikeDataAction,
@@ -12,8 +14,6 @@ import {
 } from '../../actions';
 
 import inshortsIcon from './../../global/assets/images/inshorts.png';
-import Wrapper from '../../elements/Wrapper';
-import DetailedCard from '../../components/DetailedCard';
 
 class DetailedNews extends React.Component {
   constructor(props) {
@@ -66,24 +66,6 @@ class DetailedNews extends React.Component {
   }
 }
 
-DetailedNews.defaultProps = {
-  newsList: {
-    id: 1,
-    title: 'News Title',
-    newsDescription: 'News Description',
-    image: inshortsIcon,
-    likes: 0,
-    dislikes: 0,
-    bookmarked: false,
-  },
-  actions: {
-    incrementLikeAction: () => { },
-    incrementDislikeAction: () => { },
-    toggleBookmarkAction: () => { },
-    fetchNewsListAction: () => { },
-  },
-}
-
 DetailedNews.propTypes = {
   newsList: PropTypes.shape({
     id: PropTypes.number,
@@ -100,6 +82,24 @@ DetailedNews.propTypes = {
     toggleBookmarkAction: PropTypes.func,
     fetchNewsListAction: PropTypes.func,
   }),
+};
+
+DetailedNews.defaultProps = {
+  newsList: {
+    id: 1,
+    title: 'News Title',
+    newsDescription: 'News Description',
+    image: inshortsIcon,
+    likes: 0,
+    dislikes: 0,
+    bookmarked: false,
+  },
+  actions: {
+    incrementLikeAction: () => { },
+    incrementDislikeAction: () => { },
+    toggleBookmarkAction: () => { },
+    fetchNewsListAction: () => { },
+  },
 };
 
 const mapStateToProps = state => ({

@@ -1,31 +1,31 @@
 @import './../../global/styles/common.scss';
 
 .wrapper {
-  width: 70%;
+  width: $width-percent-70;
   margin: auto;
-  padding: 50px 0;
+  padding: $padding-50 $padding-0;
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .wrapper {
-    width: 80%;
+    width: $width-percent-80;
     margin: auto;
-    padding: 40px 0;
+    padding: $padding-40 $padding-0;
   }
 }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   .wrapper {
-    width: 90%;
+    width: $width-percent-90;
     margin: auto;
-    padding: 30px 0;
+    padding: $padding-30 $padding-0;
   }
 }
 
 @media screen and (max-width: 500px) {
   .wrapper {
-    width: 95%;
+    width: $width-percent-95;
     margin: auto;
-    padding: 20px 0;
+    padding: $padding-20 $padding-0;
   }
 }

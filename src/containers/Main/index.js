@@ -4,6 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+
 import News from './../News';
 import DetailedNews from './../DetailedNews';
 import routes from '../../routes';

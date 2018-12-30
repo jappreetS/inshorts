@@ -3,18 +3,18 @@
 .newsCard {
   display: inline-block;
   position: relative;
-  width: 45%;
+  width: $width-percent-45;
   height: $height-400;
   color: $white;
-  margin: 2.5%;
+  margin: $margin-percent-2p5;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-size: cover;
 
   &:before {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: $width-percent-100;
+    height: $height-percent-100;
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
@@ -37,7 +37,7 @@
 .detailLink {
   padding: $padding-15;
   position: absolute;
-  width: 93%;
+  width: $width-percent-93;
   bottom: $bottom-40;
   font-size: $font-size-16;
   color: $white;
@@ -45,10 +45,10 @@
 }
 
 .userAction {
-  border-top: 1px solid $white;
+  border-top: $border-1 solid $white;
   padding: $padding-10;
   position: absolute;
-  width: 95%;
+  width: $width-percent-95;
   bottom: $bottom-0;
   font-size: $font-size-16;
 
@@ -98,7 +98,7 @@
   
   .userAction {
     padding: $padding-10 $padding-5;
-    width: 95%;
+    width: $width-percent-95;
     font-size: $font-size-14;
   }
 }
@@ -106,8 +106,8 @@
 @media screen and (max-width: 500px) {
   .newsCard {
     height: $height-300;
-    width: 90%;
-    margin: 5%;
+    width: $width-percent-90;
+    margin: $margin-percent-5;
   }
 
   .newsTitle {
