@@ -1,6 +1,6 @@
 # inshorts
 
-Inshort News React Application has few Responsive web pages with the multiple common components along with the React Router implementation and Redux.
+Inshort News React Application has few Responsive web pages with the multiple common components along with the React Router and Redux implementation.
 
 ## Technologies used:
 1. React
