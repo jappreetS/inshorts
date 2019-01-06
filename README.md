@@ -7,7 +7,7 @@ Inshort News React Application has few Responsive web pages with the multiple co
 2. Redux
 3. JavaScript
 4. HTML
-6. SCSS
+6. SASS
 
 ## Available Scripts
 
